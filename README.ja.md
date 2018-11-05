@@ -8,7 +8,7 @@ LINE Simple Beaconは、デバイスのなりすましを抑制するメカニ�
 そのため、ビーコンデバイス識別IDでの正真性を前提としたBotサービスには利用しないでください。
 
 ## Prerequisite
-LINE Simple Beaconを利用してLINE Botと連携したビーコンデバイスを開発するには、以下の条件を満たす必要があります。
+LINE Simple Beaconを利用してLINE Botと連携したビーコンデバイスを開発するには、開発者は以下の条件を満たす必要があります。
 
 * ひとつ以上のBotアカウントを保有していること
 * BLE Controllerの制御が可能なデバイスを保有していること

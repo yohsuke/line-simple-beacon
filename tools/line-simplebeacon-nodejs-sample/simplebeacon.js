@@ -27,7 +27,9 @@
 const simplebacon = require('./simplebeacon-lib');
 
 const argv = require('argv');
-const bleno = require('bleno');
+// const bleno = require('bleno');
+//var bleno = require('/Users/JP20158/linecorp-dev/Bot-SDK/line-simple-beacon/tools/line-simplebeacon-nodejs-sample/node_modules/bleno-mac/index');
+const bleno = require('bleno-mac');
 
 const args = argv.option([{
   name: 'hwid',
@@ -50,7 +52,18 @@ bleno.on('stateChange', function (state) {
     const data = simplebacon.createLineSimpleBeaconAdvertisingPDU(HWID, DEVICE_MESSAGE);
     console.log(data);
     bleno.startAdvertisingWithEIRData(data);
+
+    // bleno.startAdvertising('test', ['fffffffffffffffffffffffffffffff0']);
+
   } else {
     bleno.stopAdvertising();
   }
 });
+
+// bleno.on('advertisingStart', function(error) {
+//   console.log('on -> advertisingStart: ' + (error ? 'error ' + error : 'success'));
+// });
+
+// bleno.on('advertisingStop', function() {
+//   console.log('on -> advertisingStop');
+// });
